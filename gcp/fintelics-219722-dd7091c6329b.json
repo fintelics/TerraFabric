@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fintelics-219722",
+  "private_key_id": "dd7091c6329b7d1434de4e1a10f5d0695a6b032b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDdASkBKSY27U0d\nVA97pr1dT9to3fPhVctbjkJ4vgzcll2QktwfQ0gs+A8904682KwOMsjDTwcy6lp3\nVM00WCyF3yOK0iV/9BPnV0DRG2ant3Uc/C1gMEenlmCU9ka5rDGmpHbb8cNN/qRQ\nlYOhA7K9UsLlf/p9KRRwSkVeJKKj37WOTBcgNjqrKPSfTn8irIAPCOoTByDJ8YK+\nw+6Od6sr87z8XZO7BtyM23D0iVh5Ve+EMZkFTPCHadYKJ0SGlWDB4fMeZdjZtiov\nbUTsuYS+1/PpalTiDbQwor84aMNZv7bXK/ktyJEq+oCoEvaK66zXChXqREzjK469\nA3HhpbYdAgMBAAECggEAIbTB13i6aJGoG3M82ke7pU3e4X9KaQFP/tJzTl1z8jen\npPtVAZqeGSerEWug3ynvkcnKh0kYCLqn2f/PvS4+ehtmXQ+AYyOrXnLXAp1aenVX\nMfi/BebPIt7jM4zdDAfYWblHHHPirNRLpLOs6+N3wPqsmVp7rleT061sJ3fQa0wU\nYdnHTsgQGm4yfcoIu4L7n4W1Ufnk4M3bPk3sNjnaO/0Nd9F/3eeF8gV6HTEMp6b3\nSlN1xm39j5SCtN6RD5q1ovUraS2GvhGhh/0Fo1WEFXF/yfyGexOshm3JqZcsoQzI\n9LL0qfQyC/oDEESXOid6w1nCYggRh5QW7Zag+xQ4sQKBgQDw7cgaoBMIbpRuhD7j\nxsDVLdqQa9149BhYdozRWZ+GMeigXovMhqU80mhYbxgu7an1dgwFrzu1B3PxhH7X\nABticvYo8E93W273D5z35IsztGT2c9p9QVAywO+C6ML9qcuBKWdcUzhZDgmDT92g\nKi8M1F7yEhgGZyavGKohx9Of0QKBgQDq1E/jGsLt8SUHmeXtza8uUJD3rOGtJREv\nJO/KSiVFJK4o8hWU5Ficv/BhcPEUbFau7wcqNsGL+/kJHlnErDctiguY15PZuIK4\nRcAVzZHnuYGW5u63jWy6h5T1rQb75Wii00+yWeDt9HxGIjHasmVajFVVUdagbjyU\nc/JjfYewjQKBgG3sPykOscBeG3DU+5CW5PIeiqLr489EpzrtU9BMcMEcUkOg/22g\nXRGD+kGm5kS7AJlSc6fATKCKtvaRegGENfpT80W4ZrlRSS6FvBtJ9czwWEQtlZki\nTIHrjxuOMTDk4Emc52CzQ3k2M1brAHYL6Q2Uc4FEihuZwoeO3EivUDmRAoGAdNqZ\ntkVG4uiwqIuooyFLHxzwRo887dAYMQGMYXlr+nA6Sh3NJ35JqhbJI3P0Q1l1+S7w\nvczpmyMT1bnIqdmYy4x6IOCFrj3mrpPm9fKJvGnPVqwr9iLmDBwTv/0OEKMj4oKM\nkg+vojma7btuW4mSbfCPNhm3V7YDZ0wbPe7larECgYBMuknS0hXhrZoo+5zVHHgW\nvXf13aSkEhFQeYsxYi5mhodV7A0SN5PocvScSAi7LmEeeTCZR3qNbT61WmNXRVSe\nvgnWFyPdNqJB0nSkmH6tBi3jfQ0mOqna9IrfMwn3W5w6rM0soolYWhGvrhI0Sank\nHgMNwBowQpHo4mpY1L//zg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "terraform-admin@fintelics-219722.iam.gserviceaccount.com",
+  "client_id": "112513653467493970845",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/terraform-admin%40fintelics-219722.iam.gserviceaccount.com"
+}
