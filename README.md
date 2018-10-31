@@ -4,8 +4,9 @@ Hyperledger fabric initally launches one network on one host with docker-compose
 
 To better realize decentralized blockchain network, we intend to simplize the process to launch peer or order or CA on different cloud service providers with terraform.
 
+## How to do that
 With the help of terraform, it saves a lot of time to launch multiple instances on different cloud server with one command. Installing docker and pulling down required imaged and running as container can be easy handled with `start_up_script`
 
-Check the folder `gcloud_complete_network`, it's running with one ca, one orderer, two peers belonging to the same organization, and two couchdb backing up peers
+Check the folder `gcloud_complete_network`, it's running with one ca, one orderer, two peers belonging to the same organization, and two couchdb backing up peers. Make sure the network interface is configured in a good way, so that instance can talk with each other.
 
 
