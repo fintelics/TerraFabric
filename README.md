@@ -57,11 +57,11 @@ resource "google_compute_instance" "peer1" {
 
 ```
 The related documentation is attached [here](https://www.terraform.io/docs/providers/google/r/compute_instance.html)
-
+
 Here we choose "debian-cloud/debian-9" as initialize image,
 and leave it blank in scratch_disk, because we don't attach any disk with the instance.
 
-network_interface is a required field to define the network configuration including `network` ,`subnetwork` and `address_ip`
+network_interface is a required field to define the network configuration including `network` ,`subnetwork` and `address_ip`
 we choose default here because for right now, the inside structure is more important, and we set the access_config as blank.
 ```
 resource "google_compute_instance" "peer1" {
