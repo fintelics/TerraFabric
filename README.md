@@ -121,6 +121,17 @@ Once all fields are fulfilled, under the correct dirctory
 then go `terraform apply` to apply resource 
 
 
+# Fabcar-cloud
+
+So from content above we have already learned how to launches instance on clouds with terraform, right now we are about to approach the solution to  launch a network with this strategy.
+
+Go to folder `fabcar-cloud`
+
+* First of all, generat crypto credential and gensis block with `cryptogen` and `configtxgen`, which both can be found in `./bin`.
+script `generate.sh` is used to generate all info that we need.
+
+The details of `generate.sh` wouldn't be explained here, but it will be given in the future
+
 
 
 

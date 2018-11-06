@@ -1,0 +1,79 @@
+Orgainzations:
+   
+   - &OrdererOrg
+
+      Name: fintelics.com
+
+      ID: OrdererMSP
+
+      MSPDir: crypto-config/ordererOrganizations/fintelics.com/msp
+
+   - &Org1
+      Name: Org1MSP
+
+      ID: Org1MSP
+
+      MSPDir: crypto-config/peerOrganizations/org1.example.com/msp
+
+      AnchorPeers:
+      # AnchorPeers defines the location of peers which can be used
+            # for cross org gossip communication.  Note, this value is only
+            # encoded in the genesis block in the Application section context
+            - Host: peer0.org1
+              Port: 7051
+    - &Org2
+      Name: Org2MSP
+
+      ID: Org2MSP
+
+      MSPDir: crypto-config/peerOrganizations/org2/msp
+
+      AnchorPeers:
+      # AnchorPeers defines the location of peers which can be used
+            # for cross org gossip communication.  Note, this value is only
+            # encoded in the genesis block in the Application section context
+            - Host: peer0.org2
+              Port: 7051
+
+Application: &ApplicationDefaults 
+
+
+   Organizations:
+
+Orderer: &OrdererDefaults
+    
+
+    OrderType: solo
+
+    Addresses:
+       - orderer.fintelics:7050 
+    #The address provides the solutions for multiple coulds 
+
+    BatchTimeout: 2s
+
+    # Can be customized 
+    BatchSize:
+        MaxMessageCount: 10
+        AbsoluteMaxBytes: 99 MB
+        PreferredMaxBytes: 512 KB
+  Kafka:
+      Brokers: 
+          - 127.0.1:9092
+
+  Organizations:
+
+
+################################################################################
+#
+#   Profile
+#
+#   - Different configuration profiles may be encoded here to be specified
+#   as parameters to the configtxgen tool
+#
+################################################################################
+  Profiles:
+     
+      OneOrdererGensis:
+          Orderer:
+             <<: *OrdererDefaults
+             Organizations: 

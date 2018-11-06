@@ -1,0 +1,9 @@
+Getting Familar with the terraform work flow
+
+
+Purpose: Individually lanuch in cloud provider from nothing 
+
+--> terraform lanuch a instance, download docker 
+
+--> launch two single-org on two different cloud provider and connect them together
+--> Using terraform to simplify the lanuch process
