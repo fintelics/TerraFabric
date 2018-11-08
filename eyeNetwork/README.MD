@@ -22,7 +22,7 @@ Create a new advertisement provider with name, id and specified balance
 
 `videoProvider2TokenIssuer` (`vpId`,`amount`)
 ``` 
-Transaction happened between video provider and token issuer.
+Transaction happens between video provider and token issuer.
 
 vpId refers to the id of video provider.  amount refers to the amount of tokens that video provider wants to pay.
 
@@ -31,7 +31,7 @@ This method only be triggered once video provider wants to cash out by equal val
 
 `tokenIssuer2AdProvider` (`apId`,`amount`)
 ``` 
-Transaction happened between advertisement provider and token issuer. 
+Transaction happens between advertisement provider and token issuer. 
 
 apId refers to the id of advertisement provider.  amount refers to the amount of tokens that advertisement provider wants to buy from token issuer.
 
@@ -40,7 +40,7 @@ This method only be triggered once advertisement provider wants to buy tokens. B
 
 `adProvider2VideoProvider` (`apId`,`vpId`,`amount`)
 ``` 
-Transaction happened between advertisement provider and video provider.
+Transaction happens between advertisement provider and video provider.
 
 apId refers to the id of advertisement provider. vpId refers to the id of video provider. amount refers to the amount of tokens that advertisement provider wants to pay to video provider for one period of time.
 
