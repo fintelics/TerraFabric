@@ -24,27 +24,17 @@ EOF
 sudo usermod -aG docker $USER
 #Can avoid using sudo temporarily, but once after ssh, it still needs to execute it again and re-enter the terminal page
 #for the rest, pulling image from the docker-hub and run it detached 
-docker run -d hyperledger/fabric-orderer --network="fabcar-cloud" -p 7050:7050 \
---name fabcarOrderer  \
--e ORDERER_GENERAL_LOGLEVEL=info
--e ORDERER_GENERAL_LISTENADDRESS=      \
--e ORDERER_GENERAL_GENESISMETHOD=file  \
--e ORDERER_GENERAL_GENSISFILE=/etc/hyperledger/configtx/gensis.block \
--e ORDERER_GENERAL_LOCALMSPID=OrdererMSP   \
--e ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp  \
--w /opt/gopath/src/github.com/hyperledger/fabric/orderer \
--v orderer/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/:/etc/hyperledger/msp/peer \
--v orderer/crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/msp/users   \
--v orderer/config:/etc/hyperledger/configtx  #might be problem
+docker run -d hyperledger/fabric-ca --name ca.example.com --network="fabcar-cloud" -p 7054:7054 \
 
-
-
-
+-e FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server \
+-e FABRIC_CA_SERVER_CA_NAME=ca.example.com \
+-e FABRIC_CA_SERVER_CA_CERTFILI=/etc/hyperledger/fabric-ca-server-condig/ca.org1.example.com-cert.pem \
+-e FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/4239aa0dcd76daeeb8ba0cda701851d14504d31aad1b2ddddbac6a57365e497c_sk \
 
 # when reach here, it should be supposed that docker has already been installed
-# run hello-world check
-
-
+# run hello-world check 
+# Once the container has already been created, go inside that container and execute command
+ docker exec -d ca.example.com sh -c 'fabric-ca-server start -b admin:adminpw'
 
 
 

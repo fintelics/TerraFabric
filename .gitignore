@@ -8,3 +8,9 @@ terraform.tfvars
 terraform.tfstate
 bin/
 credential/
+eyeNetwork/chaincode/node_modules
+fabcar-cloud/crypto-config
+crypto-config/
+
+
+

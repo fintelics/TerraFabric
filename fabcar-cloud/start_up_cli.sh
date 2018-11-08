@@ -24,26 +24,19 @@ EOF
 sudo usermod -aG docker $USER
 #Can avoid using sudo temporarily, but once after ssh, it still needs to execute it again and re-enter the terminal page
 #for the rest, pulling image from the docker-hub and run it detached 
-docker run -d hyperledger/fabric-orderer --network="fabcar-cloud" -p 7050:7050 \
---name fabcarOrderer  \
--e ORDERER_GENERAL_LOGLEVEL=info
--e ORDERER_GENERAL_LISTENADDRESS=      \
--e ORDERER_GENERAL_GENESISMETHOD=file  \
--e ORDERER_GENERAL_GENSISFILE=/etc/hyperledger/configtx/gensis.block \
--e ORDERER_GENERAL_LOCALMSPID=OrdererMSP   \
--e ORDERER_GENERAL_LOCALMSPDIR=/etc/hyperledger/msp/orderer/msp  \
--w /opt/gopath/src/github.com/hyperledger/fabric/orderer \
--v orderer/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/:/etc/hyperledger/msp/peer \
--v orderer/crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/msp/users   \
--v orderer/config:/etc/hyperledger/configtx  #might be problem
-
-
-
-
-
+docker run -d --tty --name cli \
+-e GOPATH=/opt/gopath \
+-e CORE_VM_ENDPOINT=unix:///host/var/run/docker.sock \
+-e CORE_LOGGING_LEVEL=info \
+-e CORE_PEER_ID=cli \
+-e CORE_PEER_ADDRESS=peer0.org1.example.com:7051 \
+-e CORE_PEER_LOCALMSPID=Org1MSP \
+-e CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp \
+-e CORE_CHAINCODE_KEEPALIVE=10 \
+-w /opt/gopath/src/github.com/hyperledger/fabric/peer \
+hyperledger/fabric-tools
 # when reach here, it should be supposed that docker has already been installed
-# run hello-world check
-
+# run hello-world check 
 
 
 
