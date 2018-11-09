@@ -1,3 +1,4 @@
+eyeNetwork/chaincode/node_modules
 multi-cloud/provider.tf
 .terraform
 terraform.tfvars
@@ -10,4 +11,3 @@ fabcar-cloud/crypto-config
 *.crt
 *.key
 crypto-config
-eyeNetwork/chaincode/node_modules
